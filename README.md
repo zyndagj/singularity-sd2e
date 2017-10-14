@@ -24,4 +24,4 @@ singularity run does the following:
 
 * unpacks `$HOME/.jupyter/jupyter_notebook_config.py`
 * unpacks example SD2E data in `$WORK/jupyter/`
-* launches notebook from `$WORK/jupyter` or `$PWD`
+* launches notebook from `$WORK/jupyter` or `$PWD` on port 8888
