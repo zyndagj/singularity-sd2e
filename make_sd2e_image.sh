@@ -1,8 +1,15 @@
 #!/bin/bash
 
+set -ex
+
 # Clone latest jupyteruser-sd2e repo
-git clone https://github.com/sd2e/jupyteruser-sd2e.git
-cd jupyteruser-sd2e
+if [ -e jupyteruser-sd2e ]; then
+	cd jupyteruser-sd2e
+	git pull
+else
+	git clone https://github.com/sd2e/jupyteruser-sd2e.git
+	cd jupyteruser-sd2e
+fi
 # Build jupyteruser-sd2e docker container locally
 make clean && make develop
 
