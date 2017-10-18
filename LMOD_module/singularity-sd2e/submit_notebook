@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ ! -n "$EMAIL" ]; then
+	read -p "Please enter your email: " EMAIL
+fi
+
+export EMAIL
+
+case "${TACC_SYSTEM}" in
+maverick)
+	QUEUE="gpu"
+	;;
+*)
+	QUEUE="serial"
+	;;
+esac
+
+sbatch -p ${QUEUE} notebook_job.sh
