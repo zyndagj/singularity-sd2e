@@ -2,7 +2,6 @@
 #SBATCH -J sd2e-notebook
 #SBATCH -o sd2e-notebook.%j.o
 #SBATCH -e sd2e-notebook.%j.e
-#SBATCH -p gpu
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -A SD2E-Community
